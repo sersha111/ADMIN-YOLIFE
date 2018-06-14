@@ -1,1 +1,1 @@
-This is a test project. AdminYyolife Proto.
+Here is a description of the project.
