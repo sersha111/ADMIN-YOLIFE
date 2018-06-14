@@ -1,1 +1,1 @@
-Here is a description of the project. New
+Here is a description of the project
