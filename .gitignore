@@ -22,3 +22,4 @@ yarn-error.log*
 POST.md
 
 /.awcache
+yarn.lock
