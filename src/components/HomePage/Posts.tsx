@@ -1,19 +1,22 @@
-import * as React from 'react';
-let data = require ('./../../data/db.json');
+import * as React from 'react'
+let data = require('./../../data/db.json')
 
 class Posts extends React.Component {
   render() {
     return (
-      <div className="listOfNames"> 
+      <div className="listOfNames">
         {/* {data.posts.map(({id, name}: {id: any, name: string}) => <li key={id}> 
         <a href={`post=${id}`}>{name}</a>  </li>)}       */}
-        {data.posts.map(({id, name}: {id: any, name: string} ) => 
-          <div className="names" key={id}> <a href={`tag=${id}`}>{name}</a> </div>)}          
+        {data.posts.map(({ id, name }: { id: any; name: string }) => (
+          <div className="names" key={id}>
+            <a href={`post/${id}`}>{name}</a>
+          </div>
+        ))}
       </div>
-    );
+    )
   }
 }
-export default Posts;
+export default Posts
 
 // fetch('./../../data/data.json')
 // .then((res) => res.json())

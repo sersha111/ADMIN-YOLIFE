@@ -1,10 +1,10 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
 // import {Provider} from 'react-redux';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import registerServiceWorker from './registerServiceWorker'
+import './index.css'
 // import RootReducer from './reducers';
 
 // import 'resources/main.less';
@@ -13,9 +13,8 @@ import './index.css';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App/>
-  </BrowserRouter>
-,
-  document.getElementById('root') as HTMLElement
-);
-registerServiceWorker();
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root') as HTMLElement,
+)
+registerServiceWorker()

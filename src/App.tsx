@@ -1,6 +1,8 @@
-import * as React from 'react';
-import Navigation from './components/Navigation/Navigation';
-import Header from './components/Header/Header';
+import * as React from 'react'
+import { Route } from 'react-router-dom'
+import Header from './components/Header/Header'
+import EditPostPage from './components/EditPostPage/EditPostPage'
+import HomePage from './components/HomePage/HomePage'
 
 // import { BrowserRouter } from 'react-router-dom';
 // import Tags from './components/Tags/Tags';
@@ -16,12 +18,13 @@ class App extends React.Component<{}, {}> {
     return (
       // <Provider store={store}>
       <div className="wrapper">
-          <Header/>
-          <Navigation/>        
+        <Header />
+        <Route path="/" component={HomePage} />
+        <Route path="/post/:id" component={EditPostPage} />
+        <Route path="/tag/:id" component={EditPostPage} />
       </div>
-      
-    );
+    )
   }
 }
 
-export default App;
+export default App
