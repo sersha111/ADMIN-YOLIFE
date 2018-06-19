@@ -1,22 +1,23 @@
-import * as React from 'react'
-let data = require('./../../data/db.json')
+import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
+let data = require('./../data/db.json')
 
-class Posts extends React.Component {
+class PostList extends React.Component {
   render() {
     return (
-      <div className="listOfNames">
+      <Fragment>
         {/* {data.posts.map(({id, name}: {id: any, name: string}) => <li key={id}> 
         <a href={`post=${id}`}>{name}</a>  </li>)}       */}
         {data.posts.map(({ id, name }: { id: any; name: string }) => (
-          <div className="names" key={id}>
-            <a href={`post/${id}`}>{name}</a>
+          <div key={id}>
+            <Link to={`/post/${id}`}>{name}</Link>
           </div>
         ))}
-      </div>
+      </Fragment>
     )
   }
 }
-export default Posts
+export default PostList
 
 // fetch('./../../data/data.json')
 // .then((res) => res.json())

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import DataFormPost from './DataFormPost'
+import DataFormPost from './_DataFormPost'
 import PreviewPost from './PreviewPost'
 
 class EditPostPage extends Component<{}, {}> {
