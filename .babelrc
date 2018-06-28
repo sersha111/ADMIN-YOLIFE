@@ -1,4 +1,12 @@
 {
   "presets": ["react-app"],
-  "plugins": [["import", { "libraryName": "antd", "style": false }]]
+  "plugins": [
+    ["import", { "libraryName": "antd", "style": true }],
+    [
+      "babel-plugin-idx",
+      {
+        "importName": "./idx"
+      }
+    ]
+  ]
 }

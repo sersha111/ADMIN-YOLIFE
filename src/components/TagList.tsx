@@ -1,21 +1,37 @@
 import React, { Fragment } from 'react'
+import { Button } from 'antd'
+// import { Redirect } from 'react-router'
+
 let data = require('./../data/db.json')
+const sAlignRigth: {} = { float: 'right' }
 
 interface TagsTypes {
   id: any
-  name: string
+  title: string
 }
 
-class TagList extends React.Component {
+class TagList extends React.Component<{ history: any }, {}> {
+  state = { redirect: false, id: '' }
+
+  onStartNewTag = () => {
+    // let newId: any = Math.max(...data.tags.map((item: any) => item.id)) + 1
+    // this.setState({ redirect: true, id: newId })
+    this.props.history.push('/tag/new')
+  }
+
   render() {
-    // let tagArray = ['Еда', 'Путешествие', 'Спорт'];
-    // console.log(data.tags[1].id, data.tags[1].name, data.tags[2]);
+    // if (this.state.redirect) {
+    //   return <Redirect push={true} to={`/tag/${this.state.id}`} />
+    // }
 
     return (
       <Fragment>
-        {data.tags.map(({ id, name }: TagsTypes) => (
+        <Button style={sAlignRigth} type="primary" onClick={this.onStartNewTag}>
+          New Tag
+        </Button>
+        {data.tags.map(({ id, title }: TagsTypes) => (
           <div className="names" key={id}>
-            <a href={`tag/${id}`}>{name}</a>{' '}
+            <a href={`tag/${id}`}>{title}</a>{' '}
           </div>
         ))}
       </Fragment>

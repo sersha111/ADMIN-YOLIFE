@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Welcome = () => {
-  return <div className="welcome">Welcome to Yolife Admin</div>
+class Welcome extends Component<{}, {}> {
+  render() {
+    return <div>Welcome...</div>
+  }
 }
 
 export default Welcome

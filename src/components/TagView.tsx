@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class TagView extends React.Component {
+class TagView extends Component {
   render() {
     return <div className="TagView">TagView</div>
   }

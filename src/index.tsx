@@ -5,10 +5,10 @@ import AppLayout from './components/AppLayout'
 // import {Provider} from 'react-redux';
 import registerServiceWorker from './registerServiceWorker'
 import './index.css'
+import 'resources/main.less'
+
+export type EnumColor = 'blue' | 'red' | 'yellow' | null
 // import RootReducer from './reducers';
-
-// import 'resources/main.less';
-
 // const store = createStore(RootReducer);
 
 ReactDOM.render(
